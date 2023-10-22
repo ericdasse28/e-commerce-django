@@ -4,6 +4,8 @@
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
       "source.organizeImports": true
-    }
+    },
   },
+  "isort.args": ["--profile", "black"],
+  "files.autoSave": "afterDelay"
 }
