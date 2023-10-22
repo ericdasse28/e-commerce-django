@@ -58,4 +58,4 @@ def store(request: HttpRequest):
     data["categories"] = categories
 
     logger.info(f"You are {request.session.get('email')}")
-    return render(request, "index.html", data)
+    return render(request, "store/index.html", data)
