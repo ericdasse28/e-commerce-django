@@ -2,9 +2,8 @@ from django.http import HttpRequest, HttpResponseRedirect
 from django.shortcuts import redirect, render
 from django.views import View
 from loguru import logger
-
-from e_commerce_django.store.models.category import Category
-from e_commerce_django.store.models.product import Product
+from store.models.category import Category
+from store.models.product import Product
 
 
 class Index(View):
