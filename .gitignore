@@ -1,2 +1,6 @@
 # Python
 __pycache__/
+
+
+# SQLite
+db.sqlite3
