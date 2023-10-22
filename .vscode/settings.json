@@ -7,5 +7,15 @@
     },
   },
   "isort.args": ["--profile", "black"],
-  "files.autoSave": "afterDelay"
+  "files.autoSave": "afterDelay",
+  "[django-html]": {
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": true,
+      "strings": true
+    },
+    "editor.defaultFormatter": "monosans.djlint",
+    "djlint.enableLinting": true,
+    "djlint.profile": "django"
+  }
 }
