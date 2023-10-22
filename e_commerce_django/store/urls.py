@@ -1,9 +1,8 @@
 from django.urls import path
 
-from e_commerce_django import store
-from e_commerce_django.store.views.home import Index
+from .views.home import Index, store
 
 urlpatterns = [
-    path("/", Index.as_view(), name="homepage"),
+    path("", Index.as_view(), name="homepage"),
     path("store", store, name="store"),
 ]
