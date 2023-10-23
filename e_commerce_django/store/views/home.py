@@ -53,9 +53,10 @@ def store(request: HttpRequest):
     else:
         products = Product.get_all_products()
 
-    data = {}
-    data["products"] = products
-    data["categories"] = categories
+    data = {
+        "products": products,
+        "categories": categories,
+    }
 
     logger.info(f"You are {request.session.get('email')}")
     return render(request, "store/index.html", data)
