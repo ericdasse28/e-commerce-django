@@ -32,7 +32,7 @@
                                 </p>
                             </div>
                             <div class="card-footer p-0 no-gutters">
-                                {% if product | is_in_cart: request.session.cart %}
+                                {% if product|is_in_cart:request.session.cart %}
                                     <div class="row no-gutters">
                                         <form action="{% url 'homepage' %}/#{{ product.id }}"
                                               class="col-2"
@@ -44,7 +44,7 @@
                                                    value=" - "
                                                    class="btn btn-block btn-success border-right">
                                         </form>
-                                        <div class="text-center col btn btn-success">{{ product | cart_quantity: request.session.cart }} in Cart</div>
+                                        <div class="text-center col btn btn-success">{{ product|cart_quantity:request.session.cart }} in Cart</div>
                                         <form action="{% url 'homepage' %}/#{{ product.id }}"
                                               class="col-2 "
                                               method="post">
