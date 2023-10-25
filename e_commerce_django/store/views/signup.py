@@ -5,8 +5,7 @@ from django.http import HttpRequest
 from django.shortcuts import redirect, render
 from django.views import View
 from loguru import logger
-
-from e_commerce_django.store.models.customer import Customer
+from store.models.customer import Customer
 
 
 class SignUp(View):

@@ -2,8 +2,7 @@ from django.http import HttpRequest
 from django.shortcuts import render
 from django.views import View
 from loguru import logger
-
-from e_commerce_django.store.models.product import Product
+from store.models.product import Product
 
 
 class Cart(View):

@@ -2,8 +2,7 @@ from django.http import HttpRequest
 from django.shortcuts import render
 from django.views import View
 from loguru import logger
-
-from e_commerce_django.store.models.order import Order
+from store.models.order import Order
 
 
 class OrderView(View):

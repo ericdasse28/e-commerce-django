@@ -2,10 +2,9 @@ from django.http import HttpRequest
 from django.shortcuts import redirect
 from django.views import View
 from loguru import logger
-
-from e_commerce_django.store.models.customer import Customer
-from e_commerce_django.store.models.order import Order
-from e_commerce_django.store.models.product import Product
+from store.models.customer import Customer
+from store.models.order import Order
+from store.models.product import Product
 
 
 class CheckOut(View):

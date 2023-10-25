@@ -1,9 +1,8 @@
 import datetime
 
 from django.db import models
-
-from e_commerce_django.store.models.customer import Customer
-from e_commerce_django.store.models.product import Product
+from store.models.customer import Customer
+from store.models.product import Product
 
 
 class Order(models.Model):
