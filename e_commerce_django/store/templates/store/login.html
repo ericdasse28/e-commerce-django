@@ -10,7 +10,7 @@
                          width="150">
                     <hr>
                 </div>
-                <h3 class="alert alert-light rounded-pill text-align-center">Login</h3>
+                <h3 class="alert alert-light rounded-pill text-center">Login</h3>
                 <form action="{% url 'login' %}" method="post">
                     {% csrf_token %}
                     {% if error %}<div class="alert alert-danger" role="alert">{{ error }}</div>{% endif %}

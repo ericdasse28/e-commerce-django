@@ -1,0 +1,78 @@
+{% extends "store/base.html" %}
+{% block content %}
+    <div class="container mt-4">
+        <div class="p-3 m-3">
+            <div class="col-lg-5 rounded mx-auto border pt-4">
+                <div class="text-center col">
+                    <img src="https://th.bing.com/th/id/Rd51d7c0fde6d96a31538a86cbd57f3c0?rik=%2fTJxRkU2V371QQ&riu=http%3a%2f%2ftechnologyend.com%2fwp-content%2fuploads%2f2015%2f11%2fwhy-shop-online.jpg&ehk=v1KiYT0i5U1ABCRueDSdLqnazh2BdlVD89Z4qXE0Kgs%3d&risl=&pid=ImgRaw"
+                         alt=""
+                         height="150"
+                         width="150">
+                    <hr>
+                </div>
+                <h3 class="alert alert-success rounded-pill text-center">Create an account</h3>
+                <form action="{% url 'signup' %}" method="post">
+                    {% csrf_token %}
+                    {% if error %}<div class="alert alert-danger" role="alert">{{ error }}</div>{% endif %}
+                    <!-- First name -->
+                    <div class="form-group">
+                        <label for="firstname">First name</label>
+                        <input type="text"
+                               name="firstname"
+                               id="firstname"
+                               value="{{ values.first_name }}"
+                               class="form-control form-control-sm"
+                               placeholder="">
+                    </div>
+                    <!-- Last name -->
+                    <div class="form-group">
+                        <label for="lastname">Label name</label>
+                        <input type="text"
+                               name="lastname"
+                               id="lastname"
+                               value="{{ values.last_name }}"
+                               class="form-control form-control-sm">
+                    </div>
+                    <!-- Phone -->
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="text"
+                               name="phone"
+                               id="phone"
+                               class="form-control form-control-sm"
+                               value="{{ values.phone }}"
+                               placeholder="9876543210">
+                    </div>
+                    <!-- Email -->
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email"
+                               name="email"
+                               id="email"
+                               value="{{ values.email }}"
+                               class="form-control-sm form-control"
+                               required>
+                    </div>
+                    <!-- Password -->
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password"
+                               name="password"
+                               id="password"
+                               class="form-control form-control-sm">
+                    </div>
+                    <!-- Checkme button -->
+                    <div class="mb-3 form-check">
+                        <input type="checkbox"
+                               name="checkmeout"
+                               id="checkmeout"
+                               class="form-check-input">
+                        <label for="checkmeout" class="form-check-label d-grid gap-2">Check me out</label>
+                    </div>
+                    <hr>
+                    <button type="submit" class="btn btn-sm btn-success col-lg-12">Create an account</button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
